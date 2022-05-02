@@ -19,6 +19,8 @@ const server = http.createServer((req, res) => {
 		}
 	}
 	catch (err) {
+		res.writeHead(500, {'content-type':'text/html'});
+		res.write('<h1>500 Erreur Interne au Serveur</h1>');
 		res.end();
 	}
 });
