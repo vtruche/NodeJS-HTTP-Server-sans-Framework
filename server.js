@@ -5,6 +5,11 @@ const server = http.createServer((req, res) => {
 		res.writeHead(200, {'content-type':'text/html'});
 		res.write('<h1>Hello World Vincent !</h1>');
 		res.end();
+		if (req.method !=== "GET") {
+			res.writeHead(403, {'content-type':'text/html'});
+			res.write('<h1>403 Méthode non authorisée</h1>');
+			res.end();
+		}
 	}
 });
 
