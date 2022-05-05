@@ -76,7 +76,7 @@ console.log('Server écoute sur le port 5000');
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
-const db = require("./db");
+const db = require("./database");
 
 const mapToObj = (m) => {
   return Array.from(m).reduce((obj, [key, value]) => {
